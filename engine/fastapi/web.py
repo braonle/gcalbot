@@ -6,7 +6,6 @@ from fastapi.responses import HTMLResponse
 from oauthlib.oauth2 import InvalidGrantError
 from multiprocessing import Queue
 
-from engine.global_params import UVICORN_PORT, LISTEN_IP, PRIVATE_KEY, CERTIFICATE, CERT_PASS
 from engine.gcalendar.gcal_handlers import get_authz_token, CREDENTIALS_KEY, STATE_KEY
 
 # Queue for communication from web process to Telegram process; bool is a poison value
