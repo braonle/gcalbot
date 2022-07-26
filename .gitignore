@@ -134,3 +134,13 @@ token.json
 
 # PyCharm project files
 .idea/
+
+# Ignore Google API credentials
+*.json
+
+# Ignore SQLite3 database
+*.sqlite3
+
+# Ignore certificate and key
+*.pem
+*.key
