@@ -1,13 +1,28 @@
+# Global parameters
+DEBUG = True
+POLLING_BASED = True
+
 # Bot parameters
-TOKEN = <bot token>
-POLL_INTERVAL = 2.0
+TOKEN = <Telegram bot token>
 
 # SQLite3 parameters
-DB_NAME = <SQLite DB path>
+DB_NAME = <path to initialized SQLite3 database>
 
-# Webhook params
-PUBLIC_IP = <public IP>
-LISTEN_IP = <private IP>
-PORT = <TCP port>
+# Polling params
+POLL_INTERVAL = <seconds, how often to poll Telegram for updates>
+
+# Web params
+DNS_NAME = <public host name>
+LISTEN_IP = <IP address to listen to>
 PRIVATE_KEY = <path to certificate private key>
-CERIFICATE = <path to certificate>
+CERTIFICATE = <path to certificate>
+
+# Telegram webhook parameters
+TG_PORT = <TCP port to start Telegram listener on>
+
+# uvicorn parameters
+UVICORN_PORT = <TCP port to start FastAPI on>
+
+# Google API params
+CLIENT_SECRET = "gcalbot.json"
+REDIRECT_URL = f"https://{DNS_NAME}:{UVICORN_PORT}/oauth2callback"
